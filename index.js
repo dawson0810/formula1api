@@ -6,7 +6,7 @@ const { all } = require("express/lib/application");
 const { replaceWith } = require("cheerio/lib/api/manipulation");
 const app = express();
 
-const PORT = 6969;
+const PORT = process.env.PORT || 6969;
 
 function getAddressNoFilter(season, category) {
     return 'https://formula1.com/en/results.html/' + season + '/' + category + '.html';
