@@ -95,7 +95,7 @@ app.get('/:season/:category/all', (req, res) => {
                         result.push({
                             grandPrix: gpName,
                             date: data[gpName.split(" ").length] + " " + data[gpName.split(" ").length + 1] + " " + data[gpName.split(" ").length + 2],
-                            driver: data[4] + " " + data[5],
+                            driver: data[gpName.split(" ").length + 3] + " " + data[gpName.split(" ").length + 4],
                             team: teamName.trim(),
                             laps: data[data.length - 2],
                             raceTime: data[data.length - 1]
